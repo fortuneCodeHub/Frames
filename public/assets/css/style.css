@@ -1,0 +1,368 @@
+/* 
+    We need Roboto font for this website beauty
+*/
+body {
+    background-color: black;
+    height: 120vh;
+    display: grid;
+    margin: 0;
+    place-items: center;
+    color: #fff;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    position: relative;
+    align-items: center;
+}
+/* Cover Hero */
+.black-bg {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+/* Navbar */
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler:focus:not(:focus-visible) {
+    color: whitesmoke;
+    border: whitesmoke;
+}
+.navbar-brand {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: whitesmoke;
+}
+.btn-anchor {
+    padding: 5px 15px;
+    background-color: whitesmoke;
+    margin: 0px 5px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    /* box-shadow: 20px 20px 0 0 rgba(0, 0, 0, 0.901); */
+}
+.btn-anchor:hover {
+    background-color: rgb(46, 0, 253);
+    color: whitesmoke;
+}
+.head {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 10px solid black;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.head::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    /* box-shadow: (+ve(right)/-ve(left))x-axis (+ve(down)/-ve(up))y-axis blur-radius spread-radius color-of-shadow */
+    /* box-shadow: inset (+ve(left)/-ve(right))x-axis (+ve(up)/-ve(down))y-axis blur-radius spread-radius color-of-shadow */
+    /* 
+        You can also have more than one shadows for an object
+        example;
+        box-shadow: 
+        10px -50px 0 0 rgba(0, 0, 0, 0.2),
+        400px 100px 0 0 rgba(0, 0, 0, 0.2),
+        50px 200px 0 0 rgba(0, 0, 0, 0.2),
+        260px 300px 0 0 rgba(0, 0, 0, 0.2);
+    */
+    box-shadow: inset -23px 5px 0 5px rgba(0, 0, 0, 0.178);
+}
+.head::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 50px;
+    background-color: white;
+    border: 10px solid black;
+    top: 100%;
+}
+.left, .right {
+    background-color: black;
+    border-radius: 50%;
+    height: 175px;
+    width: 175px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left {
+    left: -9%;
+    /* margin-left: -180px; */
+}
+.right {
+    right: -9%;
+    /* margin-left: 190px; */
+}
+.left::before, .right::before {
+    content: "";
+    position: absolute;
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+    box-shadow: inset -10px 5px 0 3px rgba(255, 255, 255, 0.164);
+}
+.left::after{
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+}
+.right::after {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+.cutout {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    align-self: flex-end;
+    margin-bottom: -50px;
+}
+.head .mouth {
+    width: 180px;
+    height: 180px;
+    margin-top: 10px;
+    border: 10px solid black;
+    border-radius: 50%;
+    position: absolute;
+    align-self: center;
+    clip-path: circle(60% at 49% 100%);
+}
+.mouth::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 10px solid black;
+    top: 96px;
+    left: -8px;   
+    clip-path: circle(50% at 0 0);
+}
+.mouth::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 10px solid black;
+    top: 97px;
+    right: -8px;   
+    clip-path: circle(50% at 100% 0);
+}
+.body {
+    position: absolute;
+    height: 70px;
+    width: 120px;
+    background-color: rgb(0, 140, 255);
+    top: 350px;
+    border: 10px solid black;
+    border-radius: 100% 100% 100% 100% / 100% 100% 0% 0%;
+}
+.body::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 20px;
+    border-left: 10px solid black;
+    left: 10px;
+    top: 39px;
+}
+.body::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 20px;
+    border-right: 10px solid black;
+    right: 10px;
+    top: 39px;
+}
+.bg {
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    left: 20%;
+    border-radius: 30%;
+    top: 20px;
+    box-shadow: 
+        10px  -50px 0 0 rgba(0, 0, 0, 0.2),
+        400px 100px 0 0 rgba(0, 0, 0, 0.2),
+        50px 200px 0 0 rgba(0, 0, 0, 0.2),
+        260px 300px 0 0 rgba(0, 0, 0, 0.2);
+    animation-name: bgAnime;
+    animation-timing-function: ease-in-out;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes bgAnime {
+    from {
+        box-shadow: 
+        10px -50px 0 0 rgba(0, 0, 0, 0.2),
+        400px 100px 0 0 rgba(0, 0, 0, 0.2),
+        50px 200px 0 0 rgba(0, 0, 0, 0.2),
+        260px 300px 0 0 rgba(0, 0, 0, 0.2);
+    }
+    to {
+        box-shadow: 
+        400px  -50px 0 0 rgba(0, 0, 0, 0.2),
+        10px 100px 0 0 rgba(0, 0, 0, 0.2),
+        360px 200px 0 0 rgba(0, 0, 0, 0.2),
+        10px 300px 0 0 rgba(0, 0, 0, 0.2);
+    }
+}
+/* Footer section */
+.footer {
+    padding: 15px 0px;
+    font-size: 14px;
+    word-spacing: 2px;
+}
+.footer-anchor {
+    font-style: italic;
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+}
+.footer-anchor:hover {
+    color: rgb(46, 0, 253);
+}
+/* 
+    Signin page
+*/
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    margin-top: 70px;
+}
+
+.form-anchor {
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: none;
+    color: black;
+}
+
+.form-anchor:hover {
+    color: rgb(46, 0, 253);
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-bottom-anchor {
+    /* color: ; */
+    /* text-decoration: none; */
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.form-bottom-anchor:hover {
+    color: rgb(46, 0, 253);
+}
+
+/* .form-signin .form-floating {
+    margin-top: 10px;
+} */
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+/*
+    Responsive Section
+*/
+@media (max-width : 767px) {
+    .bg {
+        left: 5%;
+    }
+}
+@media (max-width : 450px) {
+    .bg {
+        left: 1%;
+    }
+}
+@media (max-width: 991px) {
+    .btn-anchor {
+        margin: 5px 0px;
+    }
+    .navbar-nav .nav-item {
+        text-align: center;
+    }
+}
+@media (min-width: 1200px) {
+    .bg {
+        left: 30%;
+    }
+}
+/* .icon {
+    transition: all 1s ease-in-out;
+}
+.icon:hover {
+    transform: rotate(90deg);
+} */
+.frame-title {
+    font-size: 70px;
+    font-weight: bolder;
+    position: relative;
+    /* background-color: red; */
+    line-height: 100%;
+    transform: rotate(-5deg);
+}
+.frame-title span {
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 60%;
+    font-style: oblique;
+    background: rgba(32, 32, 32, 0.404);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 13px 5px 13px 5px;
+    line-height: 100%;
+    /* height: 100%; */
+    transform: rotate(10deg);
+}
